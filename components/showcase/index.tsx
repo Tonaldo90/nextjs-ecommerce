@@ -18,9 +18,9 @@ export default function Showcase({
     setVisibleToolTip(tooltip);
   };
   return (
-    <div className="bg-[#f5e7d8] h-screen">
+    <div className="bg-[#f5e7d8] h-screen font-serif">
       <div className="py-10">
-        <div className="flex md:justify-center justify-evenly gap-5">
+        <div className="flex md:justify-center justify-evenly gap-8">
           <div className="flex md:flex-col md:items-center md:p-2 md:basis-80  h-fit w-fit">
             <div className="flex absolute md:relative md:w-auto bottom-1/3 md:bottom-0  left-4 z-50 w-2/4 ">
               <Image
@@ -55,11 +55,18 @@ export default function Showcase({
             </div>
             <div className="flex flex-wrap mt-6 space-y-5 md:px-2 p-2 md:relative absolute bottom-0 w-full md:w-auto mb-3">
               <div>
-                <h1 className="text-2xl font-bold text-gray-800">
+                <h1 className="text-2xl text-gray-800 font-normal">
                   Get ready for a party
                 </h1>
               </div>
-              <p className="mt-4 text-gray-700 leading-relaxed">
+              <p className="md:hidden block mt-4 text-gray-700 ">
+                If you're looking for extraordinary gifts, you've come to the
+                right place. Timeless clothes for any style. Iconic bags
+                designed to last. And home decor that lights up rooms and faces.
+                Explore our favorite gifts, from special little somethings to
+                special occassion treats.
+              </p>
+              <p className="md:block hidden mt-4 text-gray-700">
                 Get ready to express yourself! Begin with a bold dress featuring
                 vibrant patterns or create a playful look by mixing prints.
                 Timeless floral, stripes, and wavy patterns ensure wear beyond
