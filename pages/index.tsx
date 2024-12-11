@@ -1,17 +1,13 @@
-import { Layout, Page, Text, List } from '@vercel/examples-ui'
+import Showcase from "../components/showcase";
+import getProducts from "./api/data";
 
-export default function Index() {
-  return (
-    <Page>
-      <Text variant="h2" className="mb-6">
-        Password-protected page demo
-      </Text>
-      <List>
-        <li>Username: 4dmin</li>
-        <li>Password: testpwd123</li>
-      </List>
-    </Page>
-  )
+export default function Index({ products }) {
+  return <Showcase productData={products} />;
 }
 
-Index.Layout = Layout
+export async function getStaticProps() {
+  const productData = (await getProducts()) || [];
+  return {
+    props: { products: productData },
+  };
+}
