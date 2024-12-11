@@ -15,7 +15,7 @@
   "dependencies": {
     "@vercel/examples-ui": "^1.0.5",
     "express": "^4.21.2",
-    "next": "canary",
+    "next": "15.1.0",
     "react": "latest",
     "react-dom": "latest",
     "react-image-hotspots": "^2.2.5"
