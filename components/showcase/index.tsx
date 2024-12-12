@@ -1,16 +1,12 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { Product } from "../../pages";
 
-export default function Showcase({
-  productData,
-}: {
-  productData: {
-    name: string;
-    price: number;
-  }[];
-}) {
-  const [visibleToolTip, setVisibleToolTip] = useState(null);
+export default function Showcase({ productData }: { productData: Product[] }) {
+  const [visibleToolTip, setVisibleToolTip] = useState<null | {
+    index: number;
+  }>(null);
 
   const showToolTip = (index: number) => {
     const tooltip =
@@ -18,11 +14,11 @@ export default function Showcase({
     setVisibleToolTip(tooltip);
   };
   return (
-    <div className="bg-[#f5e7d8] h-screen font-serif">
+    <div className="bg-[#f5e7d8] md:h-auto h-screen font-serif">
       <div className="py-10">
-        <div className="flex md:justify-center justify-evenly gap-8">
-          <div className="flex md:flex-col md:items-center md:p-2 md:basis-80  h-fit w-fit">
-            <div className="flex absolute md:relative md:w-auto bottom-1/3 md:bottom-0  left-4 z-50 w-2/4 ">
+        <div className="flex md:justify-center justify-between">
+          <div className="flex md:flex-col md:items-center md:basis-2/4  h-fit w-fit">
+            <div className="flex absolute md:ml-0 ml-4 md:relative  bottom-[40%] md:bottom-0  z-50 md:w-2/3 w-1/2 ">
               <Image
                 alt="A woman wearing a patterned shirt sitting on a white chair with a pink background"
                 src="/assets/Picture2.jpg"
@@ -36,7 +32,7 @@ export default function Showcase({
                   visibleToolTip && visibleToolTip?.index === 0
                     ? "bg-[#bfa76f] border-white text-white"
                     : ""
-                } cursor-pointer absolute top-0 right-0 m-5 p-2 border-2 border-black rounded-full transition-opacity flex items-center justify-center w-10 h-10`}
+                } cursor-pointer absolute top-0 right-0 m-5 p-2 border border-black rounded-full transition-opacity flex items-center justify-center w-8 h-8`}
               >
                 <i className="fas fa-check"></i>
                 {visibleToolTip && visibleToolTip?.index === 0 ? (
@@ -49,11 +45,11 @@ export default function Showcase({
                   </div>
                 ) : null}
               </div>
-              <div className="absolute bottom-0 right-0 m-5 p-2 border-2 border-black rounded-full transition-opacity flex items-center justify-center w-10 h-10">
+              <div className="absolute bottom-0 right-0 m-5 p-2 border border-black rounded-full transition-opacity flex items-center justify-center w-8 h-8">
                 <i className="fas fa-plus"></i>
               </div>
             </div>
-            <div className="flex flex-wrap mt-6 space-y-5 md:px-2 p-2 md:relative absolute bottom-0 w-full md:w-auto mb-3">
+            <div className="flex flex-wrap md:mt-6 space-y-5 md:px-2 p-2 md:relative absolute bottom-[10%] md:w-2/3 w-full mb-3">
               <div>
                 <h1 className="text-2xl text-gray-800 font-normal">
                   Get ready for a party
@@ -77,8 +73,8 @@ export default function Showcase({
               </p>
             </div>
           </div>
-          <div className="flex justify-end md:justify-center h-fit md:basis-2/4 ">
-            <div className="relative   ">
+          <div className="md:block flex justify-end h-fit md:basis-2/4 basis-2/3 ">
+            <div className="relative">
               <Image
                 alt="A woman holding a black bag with small pastel-colored pouches attached, wearing a patterned top"
                 src="/assets/Picture1.jpg"
@@ -92,7 +88,7 @@ export default function Showcase({
                   visibleToolTip && visibleToolTip?.index === 1
                     ? "bg-[#bfa76f] border-white text-white"
                     : ""
-                } cursor-pointer absolute top-0 right-0 m-5 p-2 border-2 border-black rounded-full transition-opacity flex items-center justify-center w-10 h-10`}
+                } cursor-pointer absolute top-0 right-0 m-5 p-2 border border-black rounded-full transition-opacity flex items-center justify-center  w-8 h-8`}
               >
                 <i className="fas fa-check"></i>
                 {visibleToolTip && visibleToolTip?.index === 1 ? (
@@ -104,7 +100,7 @@ export default function Showcase({
                   </div>
                 ) : null}
               </div>
-              <div className="absolute bottom-0 right-0 m-5 p-2 border-2 border-black rounded-full transition-opacity flex items-center justify-center w-10 h-10">
+              <div className="absolute bottom-0 right-0 m-5 p-2 border border-black rounded-full transition-opacity flex items-center justify-center  w-8 h-8">
                 <i className="fas fa-plus"></i>
               </div>
             </div>
