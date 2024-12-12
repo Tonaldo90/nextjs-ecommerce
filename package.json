@@ -13,6 +13,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/examples-ui": "^2.0.3",
     "next": "14.2.0",
     "react": "latest",
     "react-dom": "latest"
