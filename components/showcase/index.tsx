@@ -17,8 +17,11 @@ export default function Showcase({ productData }: { productData: Product[] }) {
       <div className="basis-1/2 p-5 md:p-0 md:pt-5 z-20">
         <div className="relative flex flex-col justify-center md:items-center">
           <div className="relative mb-10 w-2/4 md:w-[65%]">
-            <img src="/assets/Picture2.jpg" />
-            <div
+            <img
+              src="/assets/Picture2.jpg"
+              alt="A woman wearing a patterned shirt sitting on besides white chair with a pink background"
+            />
+            <button
               onClick={() => showToolTip(0)}
               className=" cursor-pointer absolute left-[60%] top-[40%] flex h-10 w-10 items-center justify-center rounded-full bg-white"
             >
@@ -31,7 +34,7 @@ export default function Showcase({ productData }: { productData: Product[] }) {
                   <p className="text-xl">{productData[0]?.price} €</p>
                 </div>
               ) : null}
-            </div>
+            </button>
           </div>
           <div className="md:w-[65%]">
             <h2 className="mb-5 text-2xl text-gray-800">
@@ -58,8 +61,11 @@ export default function Showcase({ productData }: { productData: Product[] }) {
       </div>
       <div className="order-[-1] basis-1/2 md:order-1 z-10">
         <div className="relative mb-[-40%] ml-[35%] w-[65%] md:mb-0 md:ml-0 md:w-full">
-          <img src="/assets/Picture1.jpg" />
-          <div
+          <img
+            src="/assets/Picture1.jpg"
+            alt="A woman holding a black bag with small pastel-colored pouches attached, wearing a patterned top"
+          />
+          <button
             onClick={() => showToolTip(1)}
             className=" cursor-pointer absolute left-[60%] top-[40%] flex h-10 w-10 items-center justify-center rounded-full bg-white"
           >
@@ -72,7 +78,7 @@ export default function Showcase({ productData }: { productData: Product[] }) {
                 <p className="text-xl">{productData[0]?.price} €</p>
               </div>
             ) : null}
-          </div>
+          </button>
         </div>
       </div>
       <link
