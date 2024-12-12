@@ -4,6 +4,17 @@ export const config = {
   matcher: ["/", "/index"],
 };
 
+/**
+ * Middleware function to handle basic authentication.
+ *
+ * @param {NextRequest} req - The incoming request object.
+ * @returns {NextResponse} - The response object.
+ *
+ * This middleware checks for the presence of an "authorization" header in the request.
+ * If the header is present, it extracts the username and password from the Basic Auth value.
+ * If the username and password match the expected values, the request is allowed to proceed.
+ * Otherwise, the request is rewritten to the "/api/auth" path.
+ */
 export default function middleware(req: NextRequest) {
   const basicAuth = req.headers.get("authorization");
   const url = req.nextUrl;

@@ -1,52 +1,33 @@
----
-name: Basic Auth Password Protection
-slug: basic-auth-password
-description: Password protect pages in your application using Edge Middleware.
-framework: Next.js
-useCase: Edge Middleware
-css: Tailwind
-deployUrl: https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/edge-middleware/basic-auth-password&project-name=basic-auth-password&repository-name=basic-auth-password
-demoUrl: https://edge-functions-basic-auth-password.vercel.app
-relatedTemplates:
-  - jwt-authentication
-  - subdomains-auth
----
+# NextJS Commerce Site
 
-# Basic Auth Password Protection
+Password protected TypeScript & Tailwind powered NextJS showcase
 
-Password protect pages in your application using Edge Middleware.
+## Table of Contents
+
+- Demo
+- Environment Variables
+- Local Deploy
+- License
 
 ## Demo
 
-https://edge-functions-basic-auth-password.vercel.app
+https://nextjs-ecommerce-ashy-beta.vercel.app/
 
-Login credentials:
+Credentials needed.
 
-- Username: `4dmin`
-- Password: `testpwd123`
+## Environment Variables
 
-## How to Use
+- `API_URL` (if not set, "localhost:3000/api" is used)
 
-You can choose from one of the following two methods to use this repository:
+## Local Deploy
 
-### One-Click Deploy
+Make sure you have the NodeJS API running first by cloning [this repo](https://github.com/Tonaldo90/nextjs-ecommerce-api) and following the instructions within.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+1. Install dependencies:
+   npm install
+2. Start the development server:
+   npm run dev
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/examples/tree/main/edge-middleware/basic-auth-password&project-name=basic-auth-password&repository-name=basic-auth-password)
+## License
 
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/edge-middleware/basic-auth-password basic-auth-password
-```
-
-Next, run Next.js in development mode:
-
-```bash
-pnpm dev
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=edge-middleware-eap) ([Documentation](https://nextjs.org/docs/deployment)).
+This project is licensed under the MIT License.

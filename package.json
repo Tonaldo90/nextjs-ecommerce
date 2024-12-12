@@ -1,8 +1,8 @@
 {
-  "name": "basic-auth-password",
+  "name": "NextJS ecommerce showcase",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vercel/examples.git"
+    "url": "git+https://github.com/Tonaldo90/nextjs-ecommerce.git"
   },
   "license": "MIT",
   "private": true,
@@ -13,8 +13,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@vercel/examples-ui": "^1.0.5",
-    "express": "^4.21.2",
     "next": "14.2.0",
     "react": "latest",
     "react-dom": "latest"
@@ -31,12 +29,7 @@
     "typescript": "4.5.5"
   },
   "version": "1.0.0",
-  "description": "--- name: Basic Auth Password Protection slug: basic-auth-password description: Password protect pages in your application using Edge Middleware. framework: Next.js useCase: Edge Middleware css: Tailwind deployUrl: https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/edge-middleware/basic-auth-password&project-name=basic-auth-password&repository-name=basic-auth-password demoUrl: https://edge-functions-basic-auth-password.vercel.app relatedTemplates:   - jwt-authentication   - subdomains-auth ---",
-  "main": "postcss.config.js",
   "keywords": [],
   "author": "",
-  "bugs": {
-    "url": "https://github.com/vercel/examples/issues"
-  },
-  "homepage": "https://github.com/vercel/examples#readme"
+  "homepage": "https://github.com/Tonaldo90/nextjs-ecommerce#readme"
 }

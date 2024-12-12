@@ -1,11 +1,6 @@
 import Showcase from "../components/showcase";
-import getProducts from "./api/data";
-export interface Product {
-  id: string;
-  sku: string;
-  price: string;
-  name: string;
-}
+import getProducts, { Product } from "./api/data";
+
 export default function Index({ products }: { products: Product[] }) {
   return <Showcase productData={products} />;
 }
